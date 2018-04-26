@@ -5,5 +5,5 @@ sort of... The primary reasons are my inner desires to do more with less, make
 something out of nothing, and give more than I take. As person who doesn't have
 the greatest memory, I often forget why I'm doing something and end up doing
 unnecessary work that doesn't put me anywhere closer to my goals. The exact
-opposite of efficient. In order to break my limits, I decided to document the
-reasons behind the decisions I make.
+opposite of efficient. In order to break my limits and become a bit more 
+efficient, I decided to document the reasons behind the decisions I make.
