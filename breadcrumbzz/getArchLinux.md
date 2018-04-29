@@ -104,6 +104,8 @@ partitions.
 
 1. `pacman -S iw wpa_supplicant dialog`
 2. `wifi-menu -o`
+3. Find profile `netctl list`.
+4. `netctl enable profile`. Replace profile with the actual profile name.
 
 *Note*: See [netctl](https://wiki.archlinux.org/index.php/Netctl) for more info.
 
