@@ -67,9 +67,8 @@ partitions.
 
 1. Connect to the internet with `wifi-menu`.
 2. Update the system clock with `timedatectl set-ntp true`.
-3. Install `base` and `base-devel` with `pacstrap /mnt base base-devel`.
-
-*Note*: [base](https://www.archlinux.org/groups/x86_64/base/) [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)
+3. Install [base](https://www.archlinux.org/groups/x86_64/base/) with 
+`pacstrap /mnt base`.
 
 ## Part 3: Post install
 
@@ -118,20 +117,23 @@ partitions.
 
 Set hostname in `/etc/hostname`.
 
-In `etc/hosts`, write the following two lines.
+In `etc/hosts`, write the following three lines. Replace hostname with the name
+set in `/etc/hostname`.
 
 `127.0.0.1 localhost`
 `::1       localhost`
+`127.0.0.1 hostname.localdomain hostname`
 
 ## User
 
-1. Set password for root `passwd`.
-2. `useradd -m USER_NAME`
-3. `passwd USER_NAME`
-4. Add `USER_NAME ALL=(ALL) ALL` to `/etc/sudoers`.
+1. `pacman -S sudo`.
+2. Set password for root `passwd`.
+3. `useradd -m USER_NAME`
+4. `passwd USER_NAME`
+5. Add `USER_NAME ALL=(ALL) ALL` to `/etc/sudoers`.
 
 ## Reboot
 
 That's pretty much it. 
 
-*Note*: USB stick is no longer needed.
+*Note*: USB stick no longer needed.
