@@ -15,7 +15,7 @@ Parts
 * Part 1: Set up partitions
 * Part 2: Install base packages
 * Part 3: Post install
-
+* List of common commands
 
 
 ## Part 0: Boot Arch Linux from USB
@@ -72,25 +72,25 @@ partitions.
 
 ## Part 3: Post install
 
-## Automount
+### Automount
 
 `genfstab -U /mnt >> /mnt/etc/fstab`
 
-## Chroot
+### Chroot
 
 `arch-chroot /mnt`
 
-## Intel microcode updates
+### Intel microcode updates
 
 `pacman -S intel-ucode`
 
-## GRUB
+### GRUB
 
 1. `pacman -S grub`
 2. `grub-install --target=i386-pc /dev/sda`
 3. `grub-mkconfig -o /boot/grub/grub.cfg`
 
-## Locale Settings
+### Locale Settings
 
 1. `ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime`
 2. `hwclock --systohc`
@@ -100,7 +100,7 @@ partitions.
 
 *Note*: You can edit files with `nano` or `vim`.
 
-## Wifi
+### Wifi
 
 1. `pacman -S iw wpa_supplicant dialog`
 2. `wifi-menu -o`
@@ -115,7 +115,7 @@ partitions.
 2. Check status `netctl status profile`
 3. Reconnect `netctl restart profile`
 
-## Hosts
+### Hosts
 
 Set hostname in `/etc/hostname`.
 
@@ -126,7 +126,7 @@ set in `/etc/hostname`.
 `::1       localhost`
 `127.0.0.1 hostname.localdomain hostname`
 
-## User
+### User
 
 1. `pacman -S sudo`.
 2. Set password for root `passwd`.
@@ -134,8 +134,9 @@ set in `/etc/hostname`.
 4. `passwd USER_NAME`
 5. Add `USER_NAME ALL=(ALL) ALL` to `/etc/sudoers`.
 
-## Reboot
+### Reboot
 
-That's pretty much it. 
+That's pretty much it. If a command or application that you usually use is not 
+available, you can just install it with `pacman -S packagename`.
 
-*Note*: USB stick no longer needed.
+*Note*: Remove USB stick and keep in safe place in case reinstall is necessary.
