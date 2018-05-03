@@ -16,6 +16,8 @@ Parts
 * Part 2: Install base packages
 * Part 3: Post install
 * List of common commands
+* Other resources
+
 
 
 ## Part 0: Boot Arch Linux from USB
@@ -122,9 +124,11 @@ Set hostname in `/etc/hostname`.
 In `etc/hosts`, write the following three lines. Replace hostname with the name
 set in `/etc/hostname`.
 
-`127.0.0.1 localhost`
-`::1       localhost`
-`127.0.0.1 hostname.localdomain hostname`
+```
+127.0.0.1 localhost
+::1       localhost
+127.0.0.1 hostname.localdomain hostname
+```
 
 ### User
 
@@ -140,3 +144,12 @@ That's pretty much it. If a command or application that you usually use is not
 available, you can just install it with `pacman -S packagename`.
 
 *Note*: Remove USB stick and keep in safe place in case reinstall is necessary.
+
+
+
+## Other resources
+
+From the [Arch Linux Wiki](https://wiki.archlinux.org/):
+
+* [Installation Guide](https://wiki.archlinux.org/index.php/Installation_guide)
+* [General recommendations](https://wiki.archlinux.org/index.php/General_recommendations)

@@ -7,3 +7,6 @@ the greatest memory, I often forget why I'm doing something and end up doing
 unnecessary work that doesn't put me anywhere closer to my goals. The exact
 opposite of efficient. In order to break my limits and become a bit more 
 efficient, I decided to document the reasons behind the decisions I make.
+
+*Note*: All documents in this repository will forever be in progress. In other
+words, they will get better over time.

@@ -1,64 +1,56 @@
 # Arch Linux GUI using xmonad
 
-[Xorg](https://wiki.archlinux.org/index.php/Xorg)
+Currently, a simple guide to get a [window manager](https://wiki.archlinux.org/index.php/Window_manager) up and running.
 
-pacman -S xorg-server xorg-apps
 
-[xinit](https://wiki.archlinux.org/index.php/Xinit)
-[xterm](https://wiki.archlinux.org/index.php/Xterm)
 
-pacman -S xorg-xinit xterm
+## Install X and xmonad
 
-[xmonad](https://wiki.archlinux.org/index.php/Xmonad)
+First install [Xorg](https://wiki.archlinux.org/index.php/Xorg), 
+[xinit](https://wiki.archlinux.org/index.php/Xinit), and 
+[xterm](https://wiki.archlinux.org/index.php/Xterm). 
 
+```
+pacman -S xorg-server xorg-apps xorg-xinit xterm
+```
+
+Next install [xmonad](https://wiki.archlinux.org/index.php/Xmonad).
+
+```
 pacman -S xmonad xmonad-contrib
+```
 
+
+
+## Starting and playing with xmonad
+
+Without configuring anything, start xmonad by first identifying its full path 
+and running `startx` on it like below.
+
+```
 which xmonad
 startx /usr/bin/xmonad
+```
 
-[xmonad basics](http://xmonad.org/tour.html)
-[xmonad cheatsheet](https://wiki.haskell.org/wikiupload/b/b8/Xmbindings.png)
+The screen should be blank. Take the [xmonad tour](http://xmonad.org/tour.html) 
+to learn the keybindings.
 
+*Note*: [xmonad keybinds cheatsheet](https://wiki.haskell.org/wikiupload/b/b8/Xmbindings.png)
 
-[Xresources](https://en.wikipedia.org/wiki/X_resources)
-[Xresources](https://wiki.archlinux.org/index.php/X_resources)
+*Note*: Windowed applications like [firefox](https://www.mozilla.org/en-US/firefox/new/) 
+can now be started in xmonad. `pacman -S firefox`.
 
-
-
-zsh
-[urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode)
-pacman -S urxvt-perls
-https://github.com/muennich/urxvt-perls
-
-emacs
-
-[Solarized](http://ethanschoonover.com/solarized)
-
-pacman -S firefox
-
-pacman -S adobe-source-code-pro-fonts
+*Note*: Most errors from `XKEYBOARD` can be ignored when starting a new 
+xsession. Deleting `~/.Xauthority` usually clears these errors.
 
 
-TODO
-set zsh
-enable copy and paste between and within windows
+
+## Other unorganized
+
+* [Xresources](https://en.wikipedia.org/wiki/X_resources)
+* [Xresources](https://wiki.archlinux.org/index.php/X_resources)
+* emacs
+* [Solarized](http://ethanschoonover.com/solarized)
+* pacman -S adobe-source-code-pro-fonts
 
 
-If source window of copy is closed, copy buffer becomes null.
-fixed with remote-clipboard?
-
-default - option-popup, readline, searchable-scrollback, selection, selection-popup
-
-
-urxvt-eval
-urxvt-kuake
-
-List of keybinds.
-C-f forward
-C-b back
-C-n next
-C-p prev
-C-a front
-C-e back
-C-M-c copy
-C-M-v paste
