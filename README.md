@@ -1,3 +1,5 @@
+Deleting this repo as soon as I finish migrating the content to jekyll.
+
 # Reasons
 
 First, a little about me. I strive for efficiency. Because I'm lazy? No, well
